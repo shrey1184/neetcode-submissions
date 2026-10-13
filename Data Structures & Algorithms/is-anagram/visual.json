@@ -1,0 +1,191 @@
+```algo-trace
+{
+  "title": "Valid Anagram - Hash Map Frequency Count",
+  "input": "s = \"racecar\"\nt = \"carrace\"",
+  "steps": [
+    {
+      "description": "Check if lengths match: len(s) = 7, len(t) = 7. Lengths are equal, proceed.",
+      "structures": [
+        {"id": "s", "type": "string", "label": "String s", "data": ["r","a","c","e","c","a","r"], "highlights": [], "pointers": {}},
+        {"id": "t", "type": "string", "label": "String t", "data": ["c","a","r","r","a","c","e"], "highlights": [], "pointers": {}},
+        {"id": "mapS", "type": "hash-map", "label": "Hash Map S", "data": {}},
+        {"id": "mapT", "type": "hash-map", "label": "Hash Map T", "data": {}}
+      ],
+      "codeLineHighlight": 4
+    },
+    {
+      "description": "Initialize empty hash maps S and T to count character frequencies.",
+      "structures": [
+        {"id": "s", "type": "string", "label": "String s", "data": ["r","a","c","e","c","a","r"], "highlights": [], "pointers": {}},
+        {"id": "t", "type": "string", "label": "String t", "data": ["c","a","r","r","a","c","e"], "highlights": [], "pointers": {}},
+        {"id": "mapS", "type": "hash-map", "label": "Hash Map S", "data": {}},
+        {"id": "mapT", "type": "hash-map", "label": "Hash Map T", "data": {}}
+      ],
+      "codeLineHighlight": 7
+    },
+    {
+      "description": "Iteration i = 0: s[0] = 'r', increment S['r'] to 1.",
+      "structures": [
+        {"id": "s", "type": "string", "label": "String s", "data": ["r","a","c","e","c","a","r"], "highlights": [0], "pointers": {"i": 0}},
+        {"id": "t", "type": "string", "label": "String t", "data": ["c","a","r","r","a","c","e"], "highlights": [], "pointers": {"i": 0}},
+        {"id": "mapS", "type": "hash-map", "label": "Hash Map S", "data": {"r": 1}},
+        {"id": "mapT", "type": "hash-map", "label": "Hash Map T", "data": {}}
+      ],
+      "codeLineHighlight": 10
+    },
+    {
+      "description": "Iteration i = 0: t[0] = 'c', increment T['c'] to 1.",
+      "structures": [
+        {"id": "s", "type": "string", "label": "String s", "data": ["r","a","c","e","c","a","r"], "highlights": [], "pointers": {"i": 0}},
+        {"id": "t", "type": "string", "label": "String t", "data": ["c","a","r","r","a","c","e"], "highlights": [0], "pointers": {"i": 0}},
+        {"id": "mapS", "type": "hash-map", "label": "Hash Map S", "data": {"r": 1}},
+        {"id": "mapT", "type": "hash-map", "label": "Hash Map T", "data": {"c": 1}}
+      ],
+      "codeLineHighlight": 11
+    },
+    {
+      "description": "Iteration i = 1: s[1] = 'a', increment S['a'] to 1.",
+      "structures": [
+        {"id": "s", "type": "string", "label": "String s", "data": ["r","a","c","e","c","a","r"], "highlights": [1], "pointers": {"i": 1}},
+        {"id": "t", "type": "string", "label": "String t", "data": ["c","a","r","r","a","c","e"], "highlights": [], "pointers": {"i": 1}},
+        {"id": "mapS", "type": "hash-map", "label": "Hash Map S", "data": {"r": 1, "a": 1}},
+        {"id": "mapT", "type": "hash-map", "label": "Hash Map T", "data": {"c": 1}}
+      ],
+      "codeLineHighlight": 10
+    },
+    {
+      "description": "Iteration i = 1: t[1] = 'a', increment T['a'] to 1.",
+      "structures": [
+        {"id": "s", "type": "string", "label": "String s", "data": ["r","a","c","e","c","a","r"], "highlights": [], "pointers": {"i": 1}},
+        {"id": "t", "type": "string", "label": "String t", "data": ["c","a","r","r","a","c","e"], "highlights": [1], "pointers": {"i": 1}},
+        {"id": "mapS", "type": "hash-map", "label": "Hash Map S", "data": {"r": 1, "a": 1}},
+        {"id": "mapT", "type": "hash-map", "label": "Hash Map T", "data": {"c": 1, "a": 1}}
+      ],
+      "codeLineHighlight": 11
+    },
+    {
+      "description": "Iteration i = 2: s[2] = 'c', increment S['c'] to 1.",
+      "structures": [
+        {"id": "s", "type": "string", "label": "String s", "data": ["r","a","c","e","c","a","r"], "highlights": [2], "pointers": {"i": 2}},
+        {"id": "t", "type": "string", "label": "String t", "data": ["c","a","r","r","a","c","e"], "highlights": [], "pointers": {"i": 2}},
+        {"id": "mapS", "type": "hash-map", "label": "Hash Map S", "data": {"r": 1, "a": 1, "c": 1}},
+        {"id": "mapT", "type": "hash-map", "label": "Hash Map T", "data": {"c": 1, "a": 1}}
+      ],
+      "codeLineHighlight": 10
+    },
+    {
+      "description": "Iteration i = 2: t[2] = 'r', increment T['r'] to 1.",
+      "structures": [
+        {"id": "s", "type": "string", "label": "String s", "data": ["r","a","c","e","c","a","r"], "highlights": [], "pointers": {"i": 2}},
+        {"id": "t", "type": "string", "label": "String t", "data": ["c","a","r","r","a","c","e"], "highlights": [2], "pointers": {"i": 2}},
+        {"id": "mapS", "type": "hash-map", "label": "Hash Map S", "data": {"r": 1, "a": 1, "c": 1}},
+        {"id": "mapT", "type": "hash-map", "label": "Hash Map T", "data": {"c": 1, "a": 1, "r": 1}}
+      ],
+      "codeLineHighlight": 11
+    },
+    {
+      "description": "Iteration i = 3: s[3] = 'e', increment S['e'] to 1.",
+      "structures": [
+        {"id": "s", "type": "string", "label": "String s", "data": ["r","a","c","e","c","a","r"], "highlights": [3], "pointers": {"i": 3}},
+        {"id": "t", "type": "string", "label": "String t", "data": ["c","a","r","r","a","c","e"], "highlights": [], "pointers": {"i": 3}},
+        {"id": "mapS", "type": "hash-map", "label": "Hash Map S", "data": {"r": 1, "a": 1, "c": 1, "e": 1}},
+        {"id": "mapT", "type": "hash-map", "label": "Hash Map T", "data": {"c": 1, "a": 1, "r": 1}}
+      ],
+      "codeLineHighlight": 10
+    },
+    {
+      "description": "Iteration i = 3: t[3] = 'r', increment T['r'] to 2.",
+      "structures": [
+        {"id": "s", "type": "string", "label": "String s", "data": ["r","a","c","e","c","a","r"], "highlights": [], "pointers": {"i": 3}},
+        {"id": "t", "type": "string", "label": "String t", "data": ["c","a","r","r","a","c","e"], "highlights": [3], "pointers": {"i": 3}},
+        {"id": "mapS", "type": "hash-map", "label": "Hash Map S", "data": {"r": 1, "a": 1, "c": 1, "e": 1}},
+        {"id": "mapT", "type": "hash-map", "label": "Hash Map T", "data": {"c": 1, "a": 1, "r": 2}}
+      ],
+      "codeLineHighlight": 11
+    },
+    {
+      "description": "Iteration i = 4: s[4] = 'c', increment S['c'] to 2.",
+      "structures": [
+        {"id": "s", "type": "string", "label": "String s", "data": ["r","a","c","e","c","a","r"], "highlights": [4], "pointers": {"i": 4}},
+        {"id": "t", "type": "string", "label": "String t", "data": ["c","a","r","r","a","c","e"], "highlights": [], "pointers": {"i": 4}},
+        {"id": "mapS", "type": "hash-map", "label": "Hash Map S", "data": {"r": 1, "a": 1, "c": 2, "e": 1}},
+        {"id": "mapT", "type": "hash-map", "label": "Hash Map T", "data": {"c": 1, "a": 1, "r": 2}}
+      ],
+      "codeLineHighlight": 10
+    },
+    {
+      "description": "Iteration i = 4: t[4] = 'a', increment T['a'] to 2.",
+      "structures": [
+        {"id": "s", "type": "string", "label": "String s", "data": ["r","a","c","e","c","a","r"], "highlights": [], "pointers": {"i": 4}},
+        {"id": "t", "type": "string", "label": "String t", "data": ["c","a","r","r","a","c","e"], "highlights": [4], "pointers": {"i": 4}},
+        {"id": "mapS", "type": "hash-map", "label": "Hash Map S", "data": {"r": 1, "a": 1, "c": 2, "e": 1}},
+        {"id": "mapT", "type": "hash-map", "label": "Hash Map T", "data": {"c": 1, "a": 2, "r": 2}}
+      ],
+      "codeLineHighlight": 11
+    },
+    {
+      "description": "Iteration i = 5: s[5] = 'a', increment S['a'] to 2.",
+      "structures": [
+        {"id": "s", "type": "string", "label": "String s", "data": ["r","a","c","e","c","a","r"], "highlights": [5], "pointers": {"i": 5}},
+        {"id": "t", "type": "string", "label": "String t", "data": ["c","a","r","r","a","c","e"], "highlights": [], "pointers": {"i": 5}},
+        {"id": "mapS", "type": "hash-map", "label": "Hash Map S", "data": {"r": 1, "a": 2, "c": 2, "e": 1}},
+        {"id": "mapT", "type": "hash-map", "label": "Hash Map T", "data": {"c": 1, "a": 2, "r": 2}}
+      ],
+      "codeLineHighlight": 10
+    },
+    {
+      "description": "Iteration i = 5: t[5] = 'c', increment T['c'] to 2.",
+      "structures": [
+        {"id": "s", "type": "string", "label": "String s", "data": ["r","a","c","e","c","a","r"], "highlights": [], "pointers": {"i": 5}},
+        {"id": "t", "type": "string", "label": "String t", "data": ["c","a","r","r","a","c","e"], "highlights": [5], "pointers": {"i": 5}},
+        {"id": "mapS", "type": "hash-map", "label": "Hash Map S", "data": {"r": 1, "a": 2, "c": 2, "e": 1}},
+        {"id": "mapT", "type": "hash-map", "label": "Hash Map T", "data": {"c": 2, "a": 2, "r": 2}}
+      ],
+      "codeLineHighlight": 11
+    },
+    {
+      "description": "Iteration i = 6: s[6] = 'r', increment S['r'] to 2.",
+      "structures": [
+        {"id": "s", "type": "string", "label": "String s", "data": ["r","a","c","e","c","a","r"], "highlights": [6], "pointers": {"i": 6}},
+        {"id": "t", "type": "string", "label": "String t", "data": ["c","a","r","r","a","c","e"], "highlights": [], "pointers": {"i": 6}},
+        {"id": "mapS", "type": "hash-map", "label": "Hash Map S", "data": {"r": 2, "a": 2, "c": 2, "e": 1}},
+        {"id": "mapT", "type": "hash-map", "label": "Hash Map T", "data": {"c": 2, "a": 2, "r": 2}}
+      ],
+      "codeLineHighlight": 10
+    },
+    {
+      "description": "Iteration i = 6: t[6] = 'e', increment T['e'] to 1.",
+      "structures": [
+        {"id": "s", "type": "string", "label": "String s", "data": ["r","a","c","e","c","a","r"], "highlights": [], "pointers": {"i": 6}},
+        {"id": "t", "type": "string", "label": "String t", "data": ["c","a","r","r","a","c","e"], "highlights": [6], "pointers": {"i": 6}},
+        {"id": "mapS", "type": "hash-map", "label": "Hash Map S", "data": {"r": 2, "a": 2, "c": 2, "e": 1}},
+        {"id": "mapT", "type": "hash-map", "label": "Hash Map T", "data": {"c": 2, "a": 2, "r": 2, "e": 1}}
+      ],
+      "codeLineHighlight": 11
+    },
+    {
+      "description": "Loop terminates after reaching the end of the strings.",
+      "structures": [
+        {"id": "s", "type": "string", "label": "String s", "data": ["r","a","c","e","c","a","r"], "highlights": [], "pointers": {}},
+        {"id": "t", "type": "string", "label": "String t", "data": ["c","a","r","r","a","c","e"], "highlights": [], "pointers": {}},
+        {"id": "mapS", "type": "hash-map", "label": "Hash Map S", "data": {"r": 2, "a": 2, "c": 2, "e": 1}},
+        {"id": "mapT", "type": "hash-map", "label": "Hash Map T", "data": {"c": 2, "a": 2, "r": 2, "e": 1}}
+      ],
+      "codeLineHighlight": 9
+    },
+    {
+      "description": "Compare S and T: both maps have identical character counts. Return True.",
+      "structures": [
+        {"id": "s", "type": "string", "label": "String s", "data": ["r","a","c","e","c","a","r"], "highlights": [], "pointers": {}},
+        {"id": "t", "type": "string", "label": "String t", "data": ["c","a","r","r","a","c","e"], "highlights": [], "pointers": {}},
+        {"id": "mapS", "type": "hash-map", "label": "Hash Map S", "data": {"r": 2, "a": 2, "c": 2, "e": 1}},
+        {"id": "mapT", "type": "hash-map", "label": "Hash Map T", "data": {"c": 2, "a": 2, "r": 2, "e": 1}},
+        {"id": "result", "type": "variable", "label": "Result", "data": true}
+      ],
+      "codeLineHighlight": 13
+    }
+  ],
+  "code": "class Solution:\n    def isAnagram(self, s: str, t: str) -> bool:\n\n        if len(s) != len(t):\n            return False\n\n        S, T = {}, {}\n\n        for i in range(len(t)):\n            S[s[i]] = 1 + S.get(s[i], 0)\n            T[t[i]] = 1 + T.get(t[i], 0)\n\n        return S == T",
+  "language": "python"
+}
+```
